@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore quality motorbikes and cars and apply through WhatsApp.">
+<title>Goldline Motors | Cars & Motorbikes</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">G</span><span id="brandName">GOLDLINE <b>MOTORS</b></span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+<nav id="nav"><a href="#home">Home</a><a href="#motorbikes">Motorbikes</a><a href="#cars">Cars</a><a href="#apply">Apply Now</a><a href="#about">About Us</a><a href="#contact">Contact Us</a></nav></header>
+<main>
+<section class="hero" id="home"><div class="hero-copy"><span class="eyebrow">YOUR JOURNEY STARTS HERE</span><h1>Find the vehicle<br><em>that moves you.</em></h1><p>Quality motorbikes and cars, flexible payment conversations and friendly support from selection to delivery.</p><a class="btn gold" href="#apply">Apply for a vehicle <span>→</span></a></div><div class="hero-image"><div class="image-caption">DRIVE YOUR NEXT CHAPTER</div></div></section>
+<section class="trust-strip"><div><strong>01</strong><span>Choose your vehicle</span></div><div><strong>02</strong><span>Send your application</span></div><div><strong>03</strong><span>Talk to our team</span></div></section>
+<section class="section" id="motorbikes"><div class="section-head"><div><span class="eyebrow">TWO-WHEEL FREEDOM</span><h2>Explore motorbikes</h2></div><a href="#apply" class="text-link" data-pick="Motorbike">Apply for a motorbike ↗</a></div><div class="vehicle-grid" id="bikeGrid"></div></section>
+<section class="section dark-section" id="cars"><div class="section-head"><div><span class="eyebrow">FOUR-WHEEL COMFORT</span><h2>Explore cars</h2></div><a href="#apply" class="text-link" data-pick="Car">Apply for a car ↗</a></div><div class="vehicle-grid" id="carGrid"></div></section>
+<section class="apply-section" id="apply"><div class="apply-intro"><span class="eyebrow">START YOUR APPLICATION</span><h2>Your next vehicle<br><em>is one step away.</em></h2><p>Tell us what you are looking for. When you submit, WhatsApp opens with your application details ready to send to our sales team.</p><div class="apply-note"><span>✦</span><p>Your application is also saved securely so our team can follow up.</p></div></div>
+<form id="applicationForm" class="application-form">
+<div class="form-title"><span>APPLICATION FORM</span><small>Fields marked * are required</small></div>
+<h3>01 / Personal information</h3><div class="form-grid">
+<label>Full name *<input name="full_name" required maxlength="100" autocomplete="name" placeholder="Your full name"></label>
+<label>Phone number *<input name="phone" required type="tel" maxlength="25" placeholder="e.g. 07XX XXX XXX"></label>
+<label>WhatsApp number *<input name="whatsapp" required type="tel" maxlength="25" placeholder="e.g. 07XX XXX XXX"></label>
+<label>Email address<input name="email" type="email" maxlength="120" placeholder="you@example.com"></label>
+<label>National ID number (optional)<input name="national_id" maxlength="40"></label>
+<label>County *<input name="county" required maxlength="80" placeholder="Your county"></label>
+<label>Town<input name="town" maxlength="80"></label>
+<label>Physical location<input name="location" maxlength="120" placeholder="Estate, area or landmark"></label>
+</div>
+<h3>02 / Vehicle information</h3><div class="form-grid">
+<label>Vehicle type *<select name="vehicle_type" id="vehicleType" required><option value="">Choose vehicle</option><option>Motorbike</option><option>Car</option></select></label>
+<label>Vehicle brand *<select name="brand" id="brandSelect" required><option value="">Choose brand</option></select></label>
+<label>Preferred model *<input name="model" required maxlength="100" placeholder="Enter preferred model"></label>
+<label>Preferred colour<input name="colour" maxlength="50"></label>
+<label>Condition<select name="condition_type"><option value="">No preference</option><option>New</option><option>Used</option></select></label>
+<label>Preferred payment method<select name="payment_method"><option value="">Choose option</option><option>Cash</option><option>Hire purchase</option><option>Bank financing</option><option>Other / discuss with me</option></select></label>
+</div>
+<h3>03 / Financial information</h3><div class="form-grid">
+<label>Available deposit (KES)<input name="deposit" maxlength="40" placeholder="e.g. 50,000"></label>
+<label>Preferred monthly payment (KES)<input name="monthly_payment" maxlength="40" placeholder="e.g. 10,000"></label>
+<label>Employment status<select name="employment_status"><option value="">Choose status</option><option>Employed</option><option>Self-employed</option><option>Business owner</option><option>Student</option><option>Other</option></select></label>
+<label>Monthly income range<select name="income_range"><option value="">Choose range</option><option>Below KES 15,000</option><option>KES 15,000–30,000</option><option>KES 30,001–50,000</option><option>KES 50,001–100,000</option><option>Above KES 100,000</option><option>Prefer to discuss</option></select></label>
+</div>
+<h3>04 / Additional information</h3><div class="form-grid">
+<label>When do you need the vehicle?<select name="delivery_time"><option value="">Choose timeframe</option><option>Immediately</option><option>Within 2 weeks</option><option>Within a month</option><option>1–3 months</option><option>Just enquiring</option></select></label>
+<label class="full">Additional comments<textarea name="comments" rows="3" maxlength="1000" placeholder="Tell us anything else that will help us assist you."></textarea></label>
+</div>
+<label class="consent"><input type="checkbox" required> I agree that the company may use these details to respond to my vehicle enquiry.</label>
+<button class="btn gold submit-btn" type="submit" id="submitBtn">Submit application & continue to WhatsApp <span>→</span></button><p class="form-message" id="formMessage" role="status"></p>
+</form></section>
+<section class="about section" id="about"><span class="eyebrow">ABOUT THE COMPANY</span><h2>Good vehicles.<br><em>Clear conversations.</em></h2><p id="aboutText">Your trusted partner for quality motorbikes and cars. We make finding your next vehicle straightforward and convenient.</p></section>
+</main>
+<footer id="contact"><div><a class="brand footer-brand" href="#"><span class="brand-mark">G</span><span id="footerName">GOLDLINE <b>MOTORS</b></span></a><p>Helping you move forward.</p></div><div><h4>CONTACT</h4><p id="contactPhone">Phone: Contact us</p><p id="contactEmail">Email: Contact us</p><p id="contactAddress"></p></div><div><h4>QUICK LINKS</h4><a href="#motorbikes">Motorbikes</a><a href="#cars">Cars</a><a href="#apply">Apply now</a><a href="/admin">Admin</a></div><small class="copyright">© <span id="year"></span> <span id="copyrightName">Goldline Motors</span>. All rights reserved.</small></footer>
+<script src="/app.js"></script></body></html>
