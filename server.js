@@ -120,7 +120,7 @@ app.post("/api/applications", (req,res) => {
   `When Needed: ${clean(b.delivery_time)||"Not specified"}`,
   `Comments: ${clean(b.comments)||"None"}`,
   "",
-  `Application reference: MOGGO-${new Date().getFullYear()}-${String(result.lastInsertRowid).padStart(4,"0")}`,,
+  `Application reference: #${result.lastInsertRowid}`,
   "Please contact this customer to discuss the application."
  ].join("\n");
  const number=String(s.whatsapp||"").replace(/\D/g,"");
